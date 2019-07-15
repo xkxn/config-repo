@@ -12,7 +12,7 @@ spring:
     username: admin 
     password: admin
 server:
-  port: 7904
+  port: 7905
 eureka:
   instance:
     hostname: localhost   # 指定该Eureka实例的主机名
