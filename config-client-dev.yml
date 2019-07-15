@@ -1,2 +1,22 @@
-com:
-  xnew:dev
+spring:
+  application:
+    name: microservice-provider
+  zipkin:
+    base-url: http://localhost:9412
+  sleuth:
+    sampler:
+      probability: 1.0
+  rabbitmq: #配置mq消息队列
+    host: 192.168.2.105 
+    port: 5672 
+    username: admin 
+    password: admin
+server:
+  port: 7903
+eureka:
+  instance:
+    hostname: localhost   # 指定该Eureka实例的主机名
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@192.168.2.202:8761/eureka
